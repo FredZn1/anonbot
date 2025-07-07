@@ -1,13 +1,11 @@
 from flask import Flask, request
 import telebot
 
-# 🔑 BOT TOKENING
-API_TOKEN = '7877469815:AAFGztBWQoACTgJl7j9hez8RkMyV7U4oo3M'
+API_TOKEN = 'TOKENINGNI_BUYERGA_YOZ'
 bot = telebot.TeleBot(API_TOKEN)
 app = Flask(__name__)
 
-# 🔗 Railway URL + token
-WEBHOOK_URL = f'https://anonbot.up.railway.app/{API_TOKEN}'
+WEBHOOK_URL = f'https://SENING-RAILWAY-URLING/{API_TOKEN}'
 
 @app.route('/' + API_TOKEN, methods=['POST'])
 def get_message():
@@ -16,8 +14,9 @@ def get_message():
     bot.process_new_updates([update])
     return '!', 200
 
-@app.route('/', methods=['GET'])
-def index():
+# 🔻 **SENING SAVOLINGGA JAVOB: Bu qism shu yerda bo‘ladi**
+@app.route("/", methods=['GET'])
+def set_webhook():
     bot.remove_webhook()
     bot.set_webhook(url=WEBHOOK_URL)
     return 'Webhook set!', 200
