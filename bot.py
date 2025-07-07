@@ -3,7 +3,6 @@ import telebot
 
 # 🔑 BOT TOKENING
 API_TOKEN = '7877469815:AAFGztBWQoACTgJl7j9hez8RkMyV7U4oo3M'
-
 bot = telebot.TeleBot(API_TOKEN)
 app = Flask(__name__)
 
@@ -18,7 +17,7 @@ def get_message():
     return '!', 200
 
 @app.route('/', methods=['GET'])
-def set_webhook():
+def index():
     bot.remove_webhook()
     bot.set_webhook(url=WEBHOOK_URL)
     return 'Webhook set!', 200
