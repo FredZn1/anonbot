@@ -20,7 +20,7 @@ def webhook():
 @app.route("/", methods=['GET'])
 def index():
     bot.remove_webhook()
-    bot.set_webhook(url="https://YOUR-PROJECT-NAME.vercel.app/api/bot")
+    bot.set_webhook(url="https://anonbot-psi.vercel.app/api/bot")
     return "Webhook set!", 200
 
 # 🔧 /start komandasi
